@@ -22,7 +22,6 @@ const  App = () => {
             <Contact />
             <StarsCanvas />
           </div>
-          efwef
         </div>
       </BrowserRouter>
     </>

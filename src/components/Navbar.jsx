@@ -20,20 +20,28 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain"/>
-          <p className="text-white text-[18px] front-bold cursor-pointer">Khoi <span className="sm:block hidden">| Qrious64</span></p>
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">Khoi&nbsp;<span className="sm:block hidden">| Qrious64</span></p>
         </Link>
-        {/* <p className="text-red-500">hi</p> */}
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li 
               key={link.id}
-              className=""
+              className={`${
+                active === link.title 
+                  ? "text-white" 
+                  : "text-gray-400"
+              } hover:text-white test-[18px] font-medium cursor-pointer`}
+              onClick={() => {setActive(link.title);}}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
+
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+              <img src={menu} alt="menu" className="w-6 h-6 cursor-pointer" onClick={() => setActive("menu")}/>
+        </div>
 
       </div>
     </nav>
