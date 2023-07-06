@@ -5,13 +5,14 @@ import { motion } from 'framer-motion'
 import { styles } from '../styles';
 import { services } from '../constants/index';
 import { fadeIn, textVariant } from '../utils/motion';
+import { SectionWrapper } from '../hoc';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
-        variant={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadown-card"
+        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+        className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
       >
         <div
           option={{
@@ -33,16 +34,16 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.div>
+      <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
-        variant={fadeIn("","", 0.1, 1)}
+        variant={fadeIn("","", 0.15, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a sophomore student at HCMIU. I'm currently studying Computer Science and I'm interested in Web Development and security. Beside computer, I also love to listen to musics and read books.
+        I'm a sophomore student at HCMIU. I'm currently studying Computer Science and I'm interested in Web Development and security. Besides computers, I also love listening to music and reading books.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
@@ -58,4 +59,4 @@ const About = () => {
 }
 
 
-export default About
+export default SectionWrapper(About, "about");
