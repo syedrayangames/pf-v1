@@ -50,11 +50,11 @@ import {
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "Linux Enthusiast",
       icon: backend,
     },
     {
-      title: "Content Creator",
+      title: "CTF Player",
       icon: creator,
     },
   ];
