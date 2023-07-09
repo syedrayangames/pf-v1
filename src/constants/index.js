@@ -134,7 +134,7 @@ import {
       iconBg: "#E6DEDD",
       date: "Jul 2022 - Feb 2023",
       points: [
-        "Developing a bombber man game using and other related technologies.",
+        "Developing a bomberman man game using and other related technologies.",
         "Creating a backend server with Java Springboot.",
       ],
     },
